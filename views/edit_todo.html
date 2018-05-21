@@ -1,0 +1,13 @@
+<div ng-controller = "TodoEditCtrl" ng-init="disableButton()">
+<h3>Check Completion</h3>
+<form ng-submit="updateTodo()">
+  <div class="form-group">
+    <label>Task completion</label>
+    <input type="checkbox" id="changeCompletion" ng-model="complete" name="complete" value=true>
+    <label for="changeCompletion">I completed</label>
+
+  </div>
+ 
+  <button type="submit" id="myBtn" class="btn btn-default">Submit</button>
+  <a class="btn btn-default" href="/dashboard#!/todos/get">Cancel</a>
+</div>

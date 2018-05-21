@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DashMod">
+	<head>
+		<!--STYLES-->
+		<link rel="stylesheet" href="/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/styles/sticky-footer-navbar.css">
+		<link rel="stylesheet" href="/styles/dashboard.css">
+		
+		<!--STYLES END-->
+	</head>
+	<body ng-controller="DashCtrl">
+			<header>
+					<!-- Fixed navbar -->
+					<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+							<h1 class="title">Todo List</h1>
+							<div class="collapse navbar-collapse" id="navbarCollapse"></div>
+								<a href="#" ng-click="logout()">Logout</a>
+							</div>
+					</nav>
+			</header>
+		
+			<!-- Begin page content -->
+			<main role="main" class="container">
+					<h1 class="mt-5">Welcome! <%= user%></h1>
+					<h4><a href="#!t/add">Add Task</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#!todos/get">View Tasks</a>
+					</h4>
+			</main>
+
+			<div class="container"> 
+				<div ng-view></div>
+			</div><!-- /.container -->
+
+			
+			
+	<!--SCRIPTS-->
+	<script src="/js/dependencies/jquery-3.2.1.js"></script>
+	<script src="/js/dependencies/angular.js"></script>
+	<script src="/js/dependencies/angular-route.min.js"></script>
+	<script src="/js/dependencies/angular-toastr.js"></script>
+	<script src="/js/dependencies/angular-toastr.tpls.js"></script>
+	<script src="/js/dependencies/foundation.min.js"></script>
+	<script src="/js/dependencies/bootstrap.min.js"></script>
+	<script src="/signupMod.js"></script>
+	<script src="/signupCtrl.js"></script>
+	<script src="/DashMod.js"></script>
+	<script src="/todos.controller.js"></script>
+	<!--SCRIPTS END-->
+	</body>
+</html>

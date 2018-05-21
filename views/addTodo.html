@@ -1,0 +1,10 @@
+<div ng-controller = "TodoCreateCtrl">
+<h3>Add Todo</h3>
+<form ng-submit="addTodo()">
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="todo" name="todo" placeholder="Enter Todo">
+  </div>
+ 
+  <button type="submit" class="btn btn-default">Submit</button>
+  <a class="btn btn-default" href="/dashboard#!/todos/get">Cancel</a>
+</div>

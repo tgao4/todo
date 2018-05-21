@@ -1,0 +1,22 @@
+<div id="container" ng-controller = "TodosCtrl">
+	<div id="content">
+		<table>
+			<tr>
+				<th>Task</th>
+				<th>Completion Status</th>
+				<th>Completed At</th>
+				<th>Action</th>
+			</tr>
+			<tr ng-repeat="todo in todos.data.todos">
+				<td> {{todo.text}} </td>
+				<td> {{todo.completed}} </td>
+				<td> <span ng-bind="todo.completedAt | date:'MM/dd/yyyy hh:mm:ss'"></span> </td>	
+				<td>
+					<a href="/dashboard#!/todos/edit/{{todo._id}}">Update</a>
+					|
+					<a href="/dashboard#!/todos/get" ng-click="removeTodo(todo)">Delete</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

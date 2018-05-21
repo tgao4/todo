@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/angular-toastr.css">
+		<link rel="stylesheet" href="/styles/app.css">
+		<link rel="stylesheet" href="/styles/foundation.css">
+		<!-- <link rel="stylesheet" href="/styles/importer.css"> -->
+		<!--STYLES END-->
+	</head>
+	<body ng-app="signupMod" ng-controller="signupCtrl">
+        <div class="large-4 large-centered columns">
+            <div class="signup-box">
+              <div class="row">
+                <div class="large-12 columns">
+                  <h2 class="text-center">
+                    UserAuth
+                  </h2>
+                  <p>Please fill in the fields below to signup</p>
+                  <form ng-submit="runSignup()">
+                      <div class="row">
+                       <div class="large-12 columns">
+                           <input type="email" placeholder="Email Address" name="email" ng-model="email" required >
+                       </div>
+                     </div>
+                    <div class="row">
+                       <div class="large-12 columns">
+                           <input ng-model="password" ng-maxlength="20" type="password" name="password" placeholder="Password length equal or more than 6"  required />
+                       </div>
+                    </div>
+                    <div class="row">
+                      <div class="large-7 columns">
+                        <input type="submit" class="button expand" value="Create Account"/>
+                      </div>
+                      <div class="large-5 columns">
+                       <a class="button expand" ng-click="runLogin()">Log In</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+	<!--SCRIPTS-->
+	<script src="/js/dependencies/jquery-3.2.1.js"></script>
+  <script src="/js/dependencies/angular.js"></script>
+  <script src="/js/dependencies/angular-toastr.js"></script>
+  <script src="/js/dependencies/angular-toastr.tpls.js"></script>
+	<script src="/js/dependencies/foundation.min.js"></script>
+	<script src="/signupMod.js"></script>
+  <script src="/signupCtrl.js"></script>
+  <script src="/DashMod.js"></script>
+	<!--SCRIPTS END-->
+	</body>
+</html>
